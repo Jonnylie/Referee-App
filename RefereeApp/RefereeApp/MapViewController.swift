@@ -23,7 +23,7 @@ class customPin: NSObject, MKAnnotation {
 }
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-
+    
     
     
     @IBOutlet weak var map: MKMapView!
@@ -32,18 +32,22 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     let manager = CLLocationManager()
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let location = locations[0]
         
-        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
+        //current location
+        let location = locations[locations.count/2]
+        
+        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.10, longitudeDelta: 0.10)
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         let region:MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
         map.setRegion(region, animated: true)
         self.map.showsUserLocation = true
         
+        
+        //custom pin
         let pin = customPin(pinTitle: "Match is happening", pinSubTitle: "Team 1 vs Team 2", location: myLocation)
         self.map.addAnnotation(pin)
         self.map.delegate = self
-    
+        
         
         
         CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in
@@ -57,12 +61,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 {
                     if place.locality != nil
                     {
-                    self.label.text = "\(place.locality!) \n \(place.subLocality!) \n \(place.country!)"
+                        self.label.text = "\(place.locality!) \n \(place.subLocality!) \n \(place.country!)"
                     }
                 }
             }
         }
-        }
+    }
     
     
     
@@ -72,8 +76,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
-       
-       
+        
+        
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -88,11 +92,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         return annotationView
     }
     
-   
+    
 }
 
 
-    
 
-    
+
+
 

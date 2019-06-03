@@ -199,5 +199,45 @@
             </objects>
             <point key="canvasLocation" x="1696" y="-620"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="pLJ-y2-rgE">
+            <objects>
+                <viewController id="Mtw-bK-jfL" customClass="MapViewController" customModule="Referee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rn3-s7-rOc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qkn-Ec-Tsn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="708"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3M-ZC-cgA">
+                                <rect key="frame" x="0.0" y="752" width="414" height="144"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="W3M-ZC-cgA" firstAttribute="top" secondItem="Qkn-Ec-Tsn" secondAttribute="bottom" id="6WM-LH-gOu"/>
+                            <constraint firstItem="Qkn-Ec-Tsn" firstAttribute="top" secondItem="xAo-s0-FvS" secondAttribute="top" id="C4s-C1-IaM"/>
+                            <constraint firstItem="W3M-ZC-cgA" firstAttribute="leading" secondItem="xAo-s0-FvS" secondAttribute="leading" id="Jfs-7t-VfR"/>
+                            <constraint firstItem="Qkn-Ec-Tsn" firstAttribute="leading" secondItem="Rn3-s7-rOc" secondAttribute="leading" id="JlF-cg-Fjx"/>
+                            <constraint firstAttribute="bottom" secondItem="W3M-ZC-cgA" secondAttribute="bottom" id="Omf-K1-ax7"/>
+                            <constraint firstItem="xAo-s0-FvS" firstAttribute="bottom" secondItem="Qkn-Ec-Tsn" secondAttribute="bottom" constant="110" id="QAJ-ur-Jro"/>
+                            <constraint firstItem="W3M-ZC-cgA" firstAttribute="trailing" secondItem="xAo-s0-FvS" secondAttribute="trailing" id="iAO-bI-KfG"/>
+                            <constraint firstAttribute="trailing" secondItem="Qkn-Ec-Tsn" secondAttribute="trailing" id="ww2-8x-SUC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xAo-s0-FvS"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="W3M-ZC-cgA" id="AFy-mF-bSw"/>
+                        <outlet property="map" destination="Qkn-Ec-Tsn" id="t1f-OU-B68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8sx-w0-Nhr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="348" y="994"/>
+        </scene>
     </scenes>
 </document>

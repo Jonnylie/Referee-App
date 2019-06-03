@@ -53,4 +53,7 @@ class TeamOneTableViewController: UITableViewController {
         cell.setTeamOnePlayer(player: team)
         return cell
     }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+        return "Player"
+    }
 }

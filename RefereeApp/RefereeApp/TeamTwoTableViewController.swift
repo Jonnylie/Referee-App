@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeamTwoTableTableViewController: UITableViewController {
+class TeamTwoTableViewController: UITableViewController {
     
     var teamTwo: [Player] = []
     
@@ -51,6 +51,9 @@ class TeamTwoTableTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "teamTwo", for: indexPath) as! PlayerCell
         cell.setTeamTwoPlayer(player: team)
         return cell
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
+        return "Player"
     }
 }
 

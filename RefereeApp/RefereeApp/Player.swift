@@ -10,46 +10,65 @@ import Foundation
 
 class Player {
     var number: Int
-    var yellowCard: Bool = false
-    var redCard: Bool = false
+    var yellowCard: Bool
+    var yellow2Card: Bool
+    var redCard: Bool
     
     init(number: Int) {
         self.number = number
         self.yellowCard = false
+        self.yellow2Card = false
         self.redCard = false
     }
     func setYellow()
     {
-        if(yellowCard == false)
+        if(!yellowCard)
         {
             yellowCard = true
         }
         else
         {
+            yellow2Card = true
             setRed()
         }
     }
     func setRed()
     {
-        if(redCard == false)
+        if(!redCard)
         {
             redCard = true
-            yellowCard = false
         }
     }
     func getCard() -> String
     {
-        if(yellowCard == true)
+        if(yellowCard && !yellow2Card)
         {
             return yellow
         }
-        else if(redCard == true)
+        else if(redCard)
         {
             return red
         }
         else
         {
             return noCards
+        }
+    }
+    func undoYellow()
+    {
+        
+        if(yellow2Card)
+        {
+            yellow2Card = false
+            redCard = false
+        }
+        else if(yellowCard)
+        {
+            yellow2Card = false
+        }
+        else if(redCard)
+        {
+            redCard = false
         }
     }
 }

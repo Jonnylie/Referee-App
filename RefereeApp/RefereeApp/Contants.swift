@@ -10,6 +10,6 @@ import Foundation
 
 let yellow = "Yellow"
 let red = "Red"
-let noCards = "NoCard"
+let noCards = "No Card"
 let home = "Home"
 let away = "Away"

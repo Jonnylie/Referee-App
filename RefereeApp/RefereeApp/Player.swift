@@ -9,13 +9,47 @@
 import Foundation
 
 class Player {
-    var number: String
-    var name: String
-    var position: String
+    var number: Int
+    var yellowCard: Bool = false
+    var redCard: Bool = false
     
-    init(number: String, name: String, position: String) {
+    init(number: Int) {
         self.number = number
-        self.name = name
-        self.position = position
+        self.yellowCard = false
+        self.redCard = false
+    }
+    func setYellow()
+    {
+        if(yellowCard == false)
+        {
+            yellowCard = true
+        }
+        else
+        {
+            setRed()
+        }
+    }
+    func setRed()
+    {
+        if(redCard == false)
+        {
+            redCard = true
+            yellowCard = false
+        }
+    }
+    func getCard() -> String
+    {
+        if(yellowCard == true)
+        {
+            return yellow
+        }
+        else if(redCard == true)
+        {
+            return red
+        }
+        else
+        {
+            return noCards
+        }
     }
 }

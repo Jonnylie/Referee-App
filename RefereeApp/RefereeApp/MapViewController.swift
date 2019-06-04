@@ -5,7 +5,6 @@
 //  Created by Erawati Tjahjadi on 02/06/19.
 //  Copyright © 2019 Franco Buena. All rights reserved.
 //
-
 import UIKit
 import MapKit
 import CoreLocation
@@ -61,7 +60,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 {
                     if place.locality != nil
                     {
-                        self.label.text = "\(place.locality!) \n \(place.subLocality!) \n \(place.country!)"
+                        self.label.text = "\(place.country!)"
                     }
                 }
             }
@@ -70,14 +69,20 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        manager.stopUpdatingLocation()
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

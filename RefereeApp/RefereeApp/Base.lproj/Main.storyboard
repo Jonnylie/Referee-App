@@ -13,25 +13,25 @@
         <!--Timer-->
         <scene sceneID="MIq-uG-zaB">
             <objects>
-                <viewController id="jaf-od-krn" customClass="ViewController" customModule="RefereeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jaf-od-krn" customClass="TimerViewController" customModule="RefereeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6bI-bU-skv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="7ov-q1-gyr">
-                                <rect key="frame" x="86.666666666666686" y="310.66666666666663" width="241" height="274.66666666666663"/>
+                                <rect key="frame" x="99.666666666666671" y="320.66666666666669" width="214.66666666666663" height="254.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6vy-yW-XDZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="241" height="135.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="214.66666666666666" height="135.66666666666666"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Game Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCV-8u-c1G">
-                                                <rect key="frame" x="0.0" y="0.0" width="241" height="32"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="214.66666666666666" height="32"/>
                                                 <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8k-G7-laY">
-                                                <rect key="frame" x="0.0" y="40.000000000000007" width="241" height="95.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="40.000000000000007" width="214.66666666666666" height="95.666666666666686"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -39,33 +39,30 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="OM5-HM-h2D">
-                                        <rect key="frame" x="0.0" y="170.66666666666663" width="241" height="104"/>
+                                        <rect key="frame" x="0.0" y="170.66666666666663" width="214.66666666666666" height="84"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="dNs-iW-Hiy">
-                                                <rect key="frame" x="0.0" y="0.0" width="241" height="42"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="104" translatesAutoresizingMaskIntoConstraints="NO" id="dNs-iW-Hiy">
+                                                <rect key="frame" x="46.666666666666686" y="0.0" width="168" height="32"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69b-NB-Rb1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="81" height="42"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                                        <state key="normal" title="START"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69b-NB-Rb1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="32" height="32"/>
+                                                        <state key="normal" image="play"/>
                                                         <connections>
                                                             <action selector="start:" destination="jaf-od-krn" eventType="touchUpInside" id="sCU-vO-4EJ"/>
                                                         </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcX-Q8-iwr">
-                                                        <rect key="frame" x="158" y="0.0" width="83" height="42"/>
-                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                                        <state key="normal" title="PAUSE"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcX-Q8-iwr">
+                                                        <rect key="frame" x="135.99999999999997" y="0.0" width="32" height="32"/>
+                                                        <state key="normal" image="pause"/>
                                                         <connections>
                                                             <action selector="pause:" destination="jaf-od-krn" eventType="touchUpInside" id="nYM-OJ-Nir"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gh-W9-PEu">
-                                                <rect key="frame" x="161" y="62.000000000000057" width="80" height="42"/>
-                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
-                                                <state key="normal" title="RESET"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gh-W9-PEu">
+                                                <rect key="frame" x="182.66666666666663" y="52.000000000000057" width="32" height="32"/>
+                                                <state key="normal" image="reset"/>
                                                 <connections>
                                                     <action selector="pause:" destination="jaf-od-krn" eventType="touchUpInside" id="BhZ-9W-rh9"/>
                                                     <action selector="reset:" destination="jaf-od-krn" eventType="touchUpInside" id="tJo-Lk-NN2"/>
@@ -294,4 +291,9 @@
             <point key="canvasLocation" x="1696" y="-742"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pause" width="32" height="32"/>
+        <image name="play" width="32" height="32"/>
+        <image name="reset" width="32" height="32"/>
+    </resources>
 </document>

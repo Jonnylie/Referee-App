@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TimerViewController: UIViewController {
 
     var time: Int = 0
     var timer = Timer()

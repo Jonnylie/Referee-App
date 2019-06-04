@@ -10,11 +10,11 @@
 		1787618E22A51B80007B255F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787618D22A51B80007B255F /* MapViewController.swift */; };
 		17C2029E22A6196800AC76A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C2029D22A6196800AC76A9 /* CoreLocation.framework */; };
 		8D43712C22A635550095F46A /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43712B22A635550095F46A /* Contants.swift */; };
+		8D43712E22A644B90095F46A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D43712D22A644B90095F46A /* Assets.xcassets */; };
 		D8A17562229E194800E5DE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17561229E194800E5DE65 /* AppDelegate.swift */; };
-		D8A17564229E194800E5DE65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17563229E194800E5DE65 /* ViewController.swift */; };
+		D8A17564229E194800E5DE65 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17563229E194800E5DE65 /* TimerViewController.swift */; };
 		D8A17567229E194900E5DE65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A17565229E194900E5DE65 /* Main.storyboard */; };
 		D8A1756A229E194900E5DE65 /* RefereeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8A17568229E194900E5DE65 /* RefereeApp.xcdatamodeld */; };
-		D8A1756C229E195200E5DE65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A1756B229E195200E5DE65 /* Assets.xcassets */; };
 		D8A1756F229E195200E5DE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A1756D229E195200E5DE65 /* LaunchScreen.storyboard */; };
 		D8A1757A229E1A0800E5DE65 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17576229E1A0600E5DE65 /* HomeTableViewController.swift */; };
 		D8A1757B229E1A0800E5DE65 /* AwayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17577229E1A0700E5DE65 /* AwayTableViewController.swift */; };
@@ -26,12 +26,12 @@
 		1787618D22A51B80007B255F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		17C2029D22A6196800AC76A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8D43712B22A635550095F46A /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		8D43712D22A644B90095F46A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8A1755E229E194800E5DE65 /* RefereeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefereeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A17561229E194800E5DE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8A17563229E194800E5DE65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D8A17563229E194800E5DE65 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		D8A17566229E194900E5DE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8A17569229E194900E5DE65 /* RefereeApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RefereeApp.xcdatamodel; sourceTree = "<group>"; };
-		D8A1756B229E195200E5DE65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8A1756E229E195200E5DE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8A17570229E195200E5DE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8A17576229E1A0600E5DE65 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -87,9 +87,9 @@
 				1787618D22A51B80007B255F /* MapViewController.swift */,
 				8D43712B22A635550095F46A /* Contants.swift */,
 				D8A17561229E194800E5DE65 /* AppDelegate.swift */,
-				D8A17563229E194800E5DE65 /* ViewController.swift */,
+				8D43712D22A644B90095F46A /* Assets.xcassets */,
+				D8A17563229E194800E5DE65 /* TimerViewController.swift */,
 				D8A17565229E194900E5DE65 /* Main.storyboard */,
-				D8A1756B229E195200E5DE65 /* Assets.xcassets */,
 				D8A1756D229E195200E5DE65 /* LaunchScreen.storyboard */,
 				D8A17570229E195200E5DE65 /* Info.plist */,
 				D8A17568229E194900E5DE65 /* RefereeApp.xcdatamodeld */,
@@ -156,7 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A1756F229E195200E5DE65 /* LaunchScreen.storyboard in Resources */,
-				D8A1756C229E195200E5DE65 /* Assets.xcassets in Resources */,
+				8D43712E22A644B90095F46A /* Assets.xcassets in Resources */,
 				D8A17567229E194900E5DE65 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,7 +171,7 @@
 				D8A1757B229E1A0800E5DE65 /* AwayTableViewController.swift in Sources */,
 				D8A1756A229E194900E5DE65 /* RefereeApp.xcdatamodeld in Sources */,
 				D8A1757D229E1A0800E5DE65 /* PlayerCell.swift in Sources */,
-				D8A17564229E194800E5DE65 /* ViewController.swift in Sources */,
+				D8A17564229E194800E5DE65 /* TimerViewController.swift in Sources */,
 				D8A1757A229E1A0800E5DE65 /* HomeTableViewController.swift in Sources */,
 				8D43712C22A635550095F46A /* Contants.swift in Sources */,
 				D8A1757C229E1A0800E5DE65 /* Player.swift in Sources */,

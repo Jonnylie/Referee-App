@@ -52,7 +52,6 @@
                                                 <rect key="frame" x="146" y="0.0" width="32" height="32"/>
                                                 <state key="normal" image="reset"/>
                                                 <connections>
-                                                    <action selector="pause:" destination="jaf-od-krn" eventType="touchUpInside" id="BhZ-9W-rh9"/>
                                                     <action selector="reset:" destination="jaf-od-krn" eventType="touchUpInside" id="tJo-Lk-NN2"/>
                                                 </connections>
                                             </button>
@@ -76,6 +75,7 @@
                     <navigationItem key="navigationItem" id="xWj-ew-t6D"/>
                     <connections>
                         <outlet property="gameTimer" destination="h8k-G7-laY" id="K2N-gA-zTR"/>
+                        <outlet property="startBtnIcon" destination="69b-NB-Rb1" id="XMx-Aq-6UA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSG-BM-PG8" sceneMemberID="firstResponder"/>

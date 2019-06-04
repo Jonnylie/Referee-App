@@ -10,21 +10,20 @@ import UIKit
 
 class PlayerCell: UITableViewCell {
     
-    @IBOutlet weak var teamHomeNumber: UILabel!
-    @IBOutlet weak var teamHomeCard: UILabel!
+    @IBOutlet weak var teamOneNumber: UILabel!
+    @IBOutlet weak var teamOneCard: UILabel!
     
-    @IBOutlet weak var teamAwayNumber: UILabel!
-    @IBOutlet weak var teamAwayCard: UILabel!
+    @IBOutlet weak var teamTwoNumber: UILabel!
+    @IBOutlet weak var teamTwoCard: UILabel!
     
     
-    func setHomePlayer(player: Player) {
-        teamHomeNumber.text = String(player.number)
-        teamHomeCard.text = player.getCard()
+    func setTeamOnePlayer(player: Player) {
+        teamOneNumber.text = player.number
+        teamOneCard.text = player.position
     }
     
     func setTeamTwoPlayer(player: Player) {
-        teamAwayNumber.text = String(player.number)
-        teamAwayCard.text = player.getCard()
-
+        teamTwoNumber.text = player.number
+        teamTwoCard.text = player.position
     }
 }

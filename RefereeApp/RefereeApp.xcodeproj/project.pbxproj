@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1787618E22A51B80007B255F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1787618D22A51B80007B255F /* MapViewController.swift */; };
 		17C2029E22A6196800AC76A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C2029D22A6196800AC76A9 /* CoreLocation.framework */; };
-		8D43712822A623170095F46A /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43712722A623170095F46A /* Contants.swift */; };
 		D8A17562229E194800E5DE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17561229E194800E5DE65 /* AppDelegate.swift */; };
 		D8A17564229E194800E5DE65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17563229E194800E5DE65 /* ViewController.swift */; };
 		D8A17567229E194900E5DE65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A17565229E194900E5DE65 /* Main.storyboard */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		1787618D22A51B80007B255F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		17C2029D22A6196800AC76A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		8D43712722A623170095F46A /* Contants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		D8A1755E229E194800E5DE65 /* RefereeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefereeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A17561229E194800E5DE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8A17563229E194800E5DE65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,11 +81,10 @@
 				D8A17578229E1A0800E5DE65 /* Player.swift */,
 				D8A17579229E1A0800E5DE65 /* PlayerCell.swift */,
 				D8A17576229E1A0600E5DE65 /* TeamOneTableViewController.swift */,
-				D8A17577229E1A0700E5DE65 /* TeamTwoTableViewController.swift */,
 				1787618D22A51B80007B255F /* MapViewController.swift */,
+				D8A17577229E1A0700E5DE65 /* TeamTwoTableViewController.swift */,
 				D8A17561229E194800E5DE65 /* AppDelegate.swift */,
 				D8A17563229E194800E5DE65 /* ViewController.swift */,
-				8D43712722A623170095F46A /* Contants.swift */,
 				D8A17565229E194900E5DE65 /* Main.storyboard */,
 				D8A1756B229E195200E5DE65 /* Assets.xcassets */,
 				D8A1756D229E195200E5DE65 /* LaunchScreen.storyboard */,
@@ -175,7 +172,6 @@
 				D8A1757A229E1A0800E5DE65 /* TeamOneTableViewController.swift in Sources */,
 				D8A1757C229E1A0800E5DE65 /* Player.swift in Sources */,
 				D8A17562229E194800E5DE65 /* AppDelegate.swift in Sources */,
-				8D43712822A623170095F46A /* Contants.swift in Sources */,
 				1787618E22A51B80007B255F /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,14 +319,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3KXJGF9KGF;
+				DEVELOPMENT_TEAM = 548WK2X5QL;
 				INFOPLIST_FILE = RefereeApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fb-enterprises.RefereeApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fb-enterprise.RefereeApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -342,14 +338,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3KXJGF9KGF;
+				DEVELOPMENT_TEAM = 548WK2X5QL;
 				INFOPLIST_FILE = RefereeApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.fb-enterprises.RefereeApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fb-enterprise.RefereeApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

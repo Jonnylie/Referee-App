@@ -76,7 +76,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBY-FF-hei">
-                                <rect key="frame" x="184" y="249" width="46" height="30"/>
+                                <rect key="frame" x="147" y="643" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -147,8 +147,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="teamHomeCard" destination="ZqZ-kb-tUZ" id="3o0-X6-keA"/>
-                                    <outlet property="teamHomeNumber" destination="uWi-rf-D9O" id="0Kk-DW-VfQ"/>
+                                    <outlet property="teamOneCard" destination="ZqZ-kb-tUZ" id="3o0-X6-keA"/>
+                                    <outlet property="teamOneNumber" destination="uWi-rf-D9O" id="0Kk-DW-VfQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -208,8 +208,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="teamAwayCard" destination="2Av-gC-RJR" id="GVY-C1-bj0"/>
-                                    <outlet property="teamAwayNumber" destination="B6s-ab-gRd" id="v7X-MR-qjZ"/>
+                                    <outlet property="teamTwoCard" destination="2Av-gC-RJR" id="GVY-C1-bj0"/>
+                                    <outlet property="teamTwoNumber" destination="B6s-ab-gRd" id="v7X-MR-qjZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -233,10 +233,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qkn-Ec-Tsn">
+<<<<<<< HEAD
                                 <rect key="frame" x="0.0" y="44" width="414" height="708"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3M-ZC-cgA">
                                 <rect key="frame" x="0.0" y="752" width="414" height="144"/>
+=======
+                                <rect key="frame" x="0.0" y="44" width="414" height="659"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3M-ZC-cgA">
+                                <rect key="frame" x="0.0" y="703" width="414" height="193"/>
+>>>>>>> parent of d1464b1... Changes made in Team table and player class
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -288,6 +295,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rgz-CQ-ypV"/>
+        <segue reference="cBA-ht-HMf"/>
     </inferredMetricsTieBreakers>
 </document>

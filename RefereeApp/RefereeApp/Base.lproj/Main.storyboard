@@ -75,6 +75,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBY-FF-hei">
+                                <rect key="frame" x="147" y="643" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="Mtw-bK-jfL" kind="show" id="Rgz-CQ-ypV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -92,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qSG-BM-PG8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="901" y="234"/>
+            <point key="canvasLocation" x="900.00000000000011" y="233.70535714285714"/>
         </scene>
         <!--Home-->
         <scene sceneID="fxG-mx-p7p">
@@ -263,6 +271,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="AXD-bN-WKE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="49q-oV-27e">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -278,4 +287,7 @@
             <point key="canvasLocation" x="1696" y="-742"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cBA-ht-HMf"/>
+    </inferredMetricsTieBreakers>
 </document>

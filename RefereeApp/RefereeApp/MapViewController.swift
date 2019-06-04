@@ -23,6 +23,10 @@ class customPin: NSObject, MKAnnotation {
 }
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    @IBAction func btnDone(_ sender: UIButton)
+    {
+        dismiss(animated: true, completion: nil)
+    }
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var label: UILabel!
     let manager = CLLocationManager()

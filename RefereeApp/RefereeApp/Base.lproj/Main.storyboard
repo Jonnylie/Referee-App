@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AXD-bN-WKE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,11 +15,11 @@
             <objects>
                 <viewController id="jaf-od-krn" customClass="ViewController" customModule="RefereeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6bI-bU-skv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="7ov-q1-gyr">
-                                <rect key="frame" x="179.5" y="163" width="241" height="274.5"/>
+                                <rect key="frame" x="86.5" y="311" width="241" height="274.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6vy-yW-XDZ">
                                         <rect key="frame" x="0.0" y="0.0" width="241" height="135.5"/>
@@ -72,7 +76,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBY-FF-hei">
-                                <rect key="frame" x="184" y="249" width="46" height="30"/>
+                                <rect key="frame" x="147" y="643" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -103,15 +107,15 @@
             <objects>
                 <tableViewController id="jlJ-Lg-AI4" customClass="TeamOneTableViewController" customModule="RefereeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fW7-9g-MKs">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Home" rowHeight="50" id="Ogm-O4-tBN" customClass="PlayerCell" customModule="RefereeApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="50"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamOne" rowHeight="50" id="Ogm-O4-tBN" customClass="PlayerCell" customModule="RefereeApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ogm-O4-tBN" id="OAX-8l-iAP">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uWi-rf-D9O">
@@ -125,7 +129,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqZ-kb-tUZ">
-                                            <rect key="frame" x="485" y="3" width="95" height="44"/>
+                                            <rect key="frame" x="299" y="3" width="95" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="ZqZ-kb-tUZ" secondAttribute="height" multiplier="95:44" id="MaR-j4-8Gj"/>
                                                 <constraint firstAttribute="width" constant="95" id="wFX-xw-usI"/>
@@ -143,8 +147,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="teamHomeCard" destination="ZqZ-kb-tUZ" id="3o0-X6-keA"/>
-                                    <outlet property="teamHomeNumber" destination="uWi-rf-D9O" id="0Kk-DW-VfQ"/>
+                                    <outlet property="teamOneCard" destination="ZqZ-kb-tUZ" id="3o0-X6-keA"/>
+                                    <outlet property="teamOneNumber" destination="uWi-rf-D9O" id="0Kk-DW-VfQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -164,15 +168,15 @@
             <objects>
                 <tableViewController id="Zcw-zE-Ht2" customClass="TeamTwoTableViewController" customModule="RefereeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EHo-of-8dj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Away" rowHeight="50" id="K0i-4N-tl3" userLabel="teamTwo" customClass="PlayerCell" customModule="RefereeApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="50"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="teamTwo" rowHeight="50" id="K0i-4N-tl3" userLabel="teamTwo" customClass="PlayerCell" customModule="RefereeApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K0i-4N-tl3" id="XLN-my-cXV">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B6s-ab-gRd">
@@ -186,7 +190,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Av-gC-RJR">
-                                            <rect key="frame" x="485" y="3" width="95" height="44"/>
+                                            <rect key="frame" x="299" y="3" width="95" height="44"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="95" id="Lfr-8u-XSh"/>
                                                 <constraint firstAttribute="width" secondItem="2Av-gC-RJR" secondAttribute="height" multiplier="95:44" id="U12-Au-Rqh"/>
@@ -204,8 +208,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="teamAwayCard" destination="2Av-gC-RJR" id="GVY-C1-bj0"/>
-                                    <outlet property="teamAwayNumber" destination="B6s-ab-gRd" id="v7X-MR-qjZ"/>
+                                    <outlet property="teamTwoCard" destination="2Av-gC-RJR" id="GVY-C1-bj0"/>
+                                    <outlet property="teamTwoNumber" destination="B6s-ab-gRd" id="v7X-MR-qjZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -225,14 +229,14 @@
             <objects>
                 <viewController id="Mtw-bK-jfL" customClass="MapViewController" customModule="RefereeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rn3-s7-rOc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qkn-Ec-Tsn">
-                                <rect key="frame" x="0.0" y="20" width="600" height="470"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="659"/>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3M-ZC-cgA">
-                                <rect key="frame" x="0.0" y="490" width="600" height="110"/>
+                                <rect key="frame" x="0.0" y="703" width="414" height="193"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -284,6 +288,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Rgz-CQ-ypV"/>
+        <segue reference="cBA-ht-HMf"/>
     </inferredMetricsTieBreakers>
 </document>

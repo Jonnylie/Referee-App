@@ -9,23 +9,34 @@
 import UIKit
 
 class TimerViewController: UIViewController {
-
+    
     var time: Int = 0
     var timer = Timer()
     
     @IBOutlet weak var gameTimer: UILabel!
+    @IBOutlet weak var startBtnIcon: UIButton!
     @IBAction func start(_ sender: UIButton) {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(startTime), userInfo: nil, repeats: true)
-    }
-    @IBAction func pause(_ sender: UIButton) {
-        timer.invalidate()
+        if(!timer.isValid)
+        {
+            timer = Timer.scheduledTimer(
+                timeInterval: 1,
+                target: self,
+                selector: #selector(startTime),
+                userInfo: nil,
+                repeats: true)
+            self.startBtnIcon.setImage(UIImage(named: "pause.png"), for: .normal)
+        }
+        else
+        {
+            self.startBtnIcon.setImage(UIImage(named: "play.png"), for: .normal)
+            timer.invalidate()
+        }
+        
     }
     @IBAction func reset(_ sender: Any) {
         time = 0
         gameTimer.text = String(formatTime(time))
     }
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,7 +53,7 @@ class TimerViewController: UIViewController {
         let minutes: Int = (totalSeconds / 60) % 60
         return String(format: "%01d:%02d", minutes, seconds)
     }
-
-
+    
+    
 }
 

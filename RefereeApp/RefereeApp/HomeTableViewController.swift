@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TeamOneTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController {
     
     var homeTeam: [Player] = []
 

@@ -16,8 +16,8 @@
 		D8A1756A229E194900E5DE65 /* RefereeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8A17568229E194900E5DE65 /* RefereeApp.xcdatamodeld */; };
 		D8A1756C229E195200E5DE65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8A1756B229E195200E5DE65 /* Assets.xcassets */; };
 		D8A1756F229E195200E5DE65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A1756D229E195200E5DE65 /* LaunchScreen.storyboard */; };
-		D8A1757A229E1A0800E5DE65 /* TeamOneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17576229E1A0600E5DE65 /* TeamOneTableViewController.swift */; };
-		D8A1757B229E1A0800E5DE65 /* TeamTwoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17577229E1A0700E5DE65 /* TeamTwoTableViewController.swift */; };
+		D8A1757A229E1A0800E5DE65 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17576229E1A0600E5DE65 /* HomeTableViewController.swift */; };
+		D8A1757B229E1A0800E5DE65 /* AwayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17577229E1A0700E5DE65 /* AwayTableViewController.swift */; };
 		D8A1757C229E1A0800E5DE65 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17578229E1A0800E5DE65 /* Player.swift */; };
 		D8A1757D229E1A0800E5DE65 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17579229E1A0800E5DE65 /* PlayerCell.swift */; };
 /* End PBXBuildFile section */
@@ -34,8 +34,8 @@
 		D8A1756B229E195200E5DE65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8A1756E229E195200E5DE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8A17570229E195200E5DE65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8A17576229E1A0600E5DE65 /* TeamOneTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamOneTableViewController.swift; sourceTree = "<group>"; };
-		D8A17577229E1A0700E5DE65 /* TeamTwoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTwoTableViewController.swift; sourceTree = "<group>"; };
+		D8A17576229E1A0600E5DE65 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		D8A17577229E1A0700E5DE65 /* AwayTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwayTableViewController.swift; sourceTree = "<group>"; };
 		D8A17578229E1A0800E5DE65 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D8A17579229E1A0800E5DE65 /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,8 +82,8 @@
 			children = (
 				D8A17578229E1A0800E5DE65 /* Player.swift */,
 				D8A17579229E1A0800E5DE65 /* PlayerCell.swift */,
-				D8A17576229E1A0600E5DE65 /* TeamOneTableViewController.swift */,
-				D8A17577229E1A0700E5DE65 /* TeamTwoTableViewController.swift */,
+				D8A17576229E1A0600E5DE65 /* HomeTableViewController.swift */,
+				D8A17577229E1A0700E5DE65 /* AwayTableViewController.swift */,
 				1787618D22A51B80007B255F /* MapViewController.swift */,
 				8D43712B22A635550095F46A /* Contants.swift */,
 				D8A17561229E194800E5DE65 /* AppDelegate.swift */,
@@ -168,11 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8A1757B229E1A0800E5DE65 /* TeamTwoTableViewController.swift in Sources */,
+				D8A1757B229E1A0800E5DE65 /* AwayTableViewController.swift in Sources */,
 				D8A1756A229E194900E5DE65 /* RefereeApp.xcdatamodeld in Sources */,
 				D8A1757D229E1A0800E5DE65 /* PlayerCell.swift in Sources */,
 				D8A17564229E194800E5DE65 /* ViewController.swift in Sources */,
-				D8A1757A229E1A0800E5DE65 /* TeamOneTableViewController.swift in Sources */,
+				D8A1757A229E1A0800E5DE65 /* HomeTableViewController.swift in Sources */,
 				8D43712C22A635550095F46A /* Contants.swift in Sources */,
 				D8A1757C229E1A0800E5DE65 /* Player.swift in Sources */,
 				D8A17562229E194800E5DE65 /* AppDelegate.swift in Sources */,

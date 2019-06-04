@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TeamTwoTableViewController: UITableViewController {
+class AwayTableViewController: UITableViewController {
     
     var teamAway: [Player] = []
     

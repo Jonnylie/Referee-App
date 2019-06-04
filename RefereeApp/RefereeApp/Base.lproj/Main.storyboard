@@ -105,7 +105,7 @@
         <!--Home-->
         <scene sceneID="fxG-mx-p7p">
             <objects>
-                <tableViewController id="jlJ-Lg-AI4" customClass="TeamOneTableViewController" customModule="RefereeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jlJ-Lg-AI4" customClass="HomeTableViewController" customModule="RefereeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fW7-9g-MKs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -166,7 +166,7 @@
         <!--Away-->
         <scene sceneID="djm-z7-OvQ">
             <objects>
-                <tableViewController id="Zcw-zE-Ht2" customClass="TeamTwoTableViewController" customModule="RefereeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Zcw-zE-Ht2" customClass="AwayTableViewController" customModule="RefereeApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="EHo-of-8dj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

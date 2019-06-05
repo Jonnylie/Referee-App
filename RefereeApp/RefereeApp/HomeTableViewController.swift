@@ -5,6 +5,9 @@
 //  Created by Kenichi Franco Buena on 28/5/19.
 //  Copyright © 2019 Franco Buena. All rights reserved.
 //
+//  Table View code gathered from various YouTube iOS tutorials
+//  "Swift UITableView Tutorial with Custom Cells - Beginner Series" -> Link: https://www.youtube.com/watch?v=FtO5QT2D_H8&t=401s
+//  "UITableView: Swipe Actions in iOS 11 | Swift 4 | Xcode 9" -> Link: https://www.youtube.com/watch?v=wUVfE8cY2Hw
 
 import UIKit
 

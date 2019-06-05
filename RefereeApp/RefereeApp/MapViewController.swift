@@ -20,6 +20,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     let manager = CLLocationManager()
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        // show user's location and live report in the map
         let location = locations[0]
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
@@ -35,11 +36,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             self.map.addAnnotation(pin)
         }
         myPin = MapPin(title: home + "vs" + away, teamHome: getCardsOfHome(), teamAway: getCardsOfAway(), location: myLocation )
+        // retrive card from whole team
         self.map.addAnnotation(myPin!)
         self.map.delegate = self
         
         
-        CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in
+        CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in // get user's coordinate and print it in the map as texts
             if error != nil {
                 print ("There was an error")
             }
@@ -47,13 +49,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 if let place = placemark?[0] {
                     if place.locality != nil {
                         self.label.text = "\(place.locality!), \(place.subLocality!) \n \(place.country!)"
+                        // prints user location such as country, city and suburb
                     }
                 }
             }
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) { // when map will appear, starts update the location
         super.viewWillAppear(animated)
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -61,12 +64,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         manager.startUpdatingLocation()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) { // when map appears, stops update the location
         super.viewDidAppear(animated)
         manager.stopUpdatingLocation()
     }
     
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? { // show custom pin and pin bubble
         if annotation is MKUserLocation {
             return nil
         }

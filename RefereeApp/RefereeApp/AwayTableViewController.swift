@@ -42,50 +42,52 @@ class AwayTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let undo = undoAction(at: indexPath)
-        return UISwipeActionsConfiguration(actions: [undo])
+        let undo_action = undoAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [undo_action])
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let yellowCard = yellowAction(at: indexPath)
-        let redCard = redAction(at: indexPath)
-        return UISwipeActionsConfiguration(actions: [redCard, yellowCard])
+        let yellowCard_action = yellowCardAction(at: indexPath)
+        let redCard_action = redCardAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [redCard_action, yellowCard_action])
     }
     
-    func yellowAction(at indexPath: IndexPath) -> UIContextualAction {
-        let yellow = teamAway[indexPath.row]
-        let action = UIContextualAction(style: .normal, title: "Yellow") { (action, view, completion) in
-            yellow.yellowCard = !yellow.yellowCard
+    func yellowCardAction(at indexPath: IndexPath) -> UIContextualAction {
+        let player = teamAway[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: yellow) { (action, view, completion) in
+            player.setYellow()
+            self.tableView.reloadRows(at: [indexPath], with: .none)
             completion(true)
         }
-        action.backgroundColor = yellow.yellowCard ? .yellow : .gray
+        action.backgroundColor = .yellow
         return action
     }
     
-    func redAction(at indexPath: IndexPath) -> UIContextualAction {
-        let red = teamAway[indexPath.row]
-        let action = UIContextualAction(style: .normal, title: "Red") { (action, view, completion) in
-            red.redCard = !red.redCard
+    func redCardAction(at indexPath: IndexPath) -> UIContextualAction {
+        let player = teamAway[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: red) { (action, view, completion) in
+            player.setRed()
+            self.tableView.reloadRows(at: [indexPath], with: .none)
             completion(true)
         }
-        action.backgroundColor = red.redCard ? .red : .gray
+        action.backgroundColor = .red
         return action
     }
     
     func undoAction(at indexPath: IndexPath) -> UIContextualAction {
-        let undo = teamAway[indexPath.row]
-        let action = UIContextualAction(style: .normal, title: "Undo") { (action, view, completion) in
-            undo.redCard = !undo.redCard
+        let player = teamAway[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: undo) { (action, view, completion) in
+            player.undo()
+            self.tableView.reloadRows(at: [indexPath], with: .none)
             completion(true)
         }
-        action.backgroundColor = undo.redCard ? .blue : .gray
+        action.backgroundColor = .blue
         return action
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return teamAway.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let team = teamAway[indexPath.row]

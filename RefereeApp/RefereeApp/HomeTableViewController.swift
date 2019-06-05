@@ -18,9 +18,6 @@ class HomeTableViewController: UITableViewController {
         
         homeTeam = createTeam()
     }
-    override func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
-        tableView.reloadRows(at: [indexPath!], with: .none)
-    }
     
     func createTeam() -> [Player] {
         var teamHomePlayers: [Player] = []
@@ -52,7 +49,6 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let yellowCard_action = yellowCardAction(at: indexPath)
         let redCard_action = redCardAction(at: indexPath)
-        self.tableView.reloadData()
         return UISwipeActionsConfiguration(actions: [redCard_action, yellowCard_action])
     }
     
@@ -60,9 +56,9 @@ class HomeTableViewController: UITableViewController {
         let player = homeTeam[indexPath.row]
         let action = UIContextualAction(style: .normal, title: yellow) { (action, view, completion) in
             player.setYellow()
+            self.tableView.reloadRows(at: [indexPath], with: .none)
             completion(true)
         }
-        action.color
         action.backgroundColor = .yellow
         return action
     }
@@ -71,6 +67,7 @@ class HomeTableViewController: UITableViewController {
         let player = homeTeam[indexPath.row]
         let action = UIContextualAction(style: .normal, title: red) { (action, view, completion) in
             player.setRed()
+            self.tableView.reloadRows(at: [indexPath], with: .none)
             completion(true)
         }
         action.backgroundColor = .red
@@ -81,6 +78,7 @@ class HomeTableViewController: UITableViewController {
         let player = homeTeam[indexPath.row]
         let action = UIContextualAction(style: .normal, title: undo) { (action, view, completion) in
             player.undo()
+            self.tableView.reloadRows(at: [indexPath], with: .none)
             completion(true)
         }
         action.backgroundColor = .blue

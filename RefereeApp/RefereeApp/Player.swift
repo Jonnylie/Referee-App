@@ -22,14 +22,17 @@ class Player {
     }
     func setYellow()
     {
-        if(!yellowCard)
+        if(!redCard)
         {
-            yellowCard = true
-        }
-        else
-        {
-            yellow2Card = true
-            setRed()
+            if(!yellowCard)
+            {
+                yellowCard = true
+            }
+            else if(!yellow2Card)
+            {
+                yellow2Card = true
+                setRed()
+            }
         }
     }
     func setRed()
@@ -54,7 +57,7 @@ class Player {
             return noCards
         }
     }
-    func undoYellow()
+    func undo()
     {
         
         if(yellow2Card)
@@ -64,7 +67,7 @@ class Player {
         }
         else if(yellowCard)
         {
-            yellow2Card = false
+            yellowCard = false
         }
         else if(redCard)
         {

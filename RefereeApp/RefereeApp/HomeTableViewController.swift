@@ -18,6 +18,9 @@ class HomeTableViewController: UITableViewController {
         
         homeTeam = createTeam()
     }
+    override func tableView(_ tableView: UITableView, didEndEditingRowAt indexPath: IndexPath?) {
+        tableView.reloadRows(at: [indexPath!], with: .none)
+    }
     
     func createTeam() -> [Player] {
         var teamHomePlayers: [Player] = []
@@ -37,63 +40,64 @@ class HomeTableViewController: UITableViewController {
         return teamHomePlayers
     }
 
-
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let undo = undoAction(at: indexPath)
-        return UISwipeActionsConfiguration(actions: [undo])
+        let undo_action = undoAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions: [undo_action])
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let yellowCard = yellowAction(at: indexPath)
-        let redCard = redAction(at: indexPath)
-        return UISwipeActionsConfiguration(actions: [redCard, yellowCard])
+        let yellowCard_action = yellowCardAction(at: indexPath)
+        let redCard_action = redCardAction(at: indexPath)
+        self.tableView.reloadData()
+        return UISwipeActionsConfiguration(actions: [redCard_action, yellowCard_action])
     }
     
-    func yellowAction(at indexPath: IndexPath) -> UIContextualAction {
-        let yellow = homeTeam[indexPath.row]
-        let action = UIContextualAction(style: .normal, title: "Yellow") { (action, view, completion) in
-            yellow.yellowCard = !yellow.yellowCard
+    func yellowCardAction(at indexPath: IndexPath) -> UIContextualAction {
+        let player = homeTeam[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: yellow) { (action, view, completion) in
+            player.setYellow()
             completion(true)
         }
-        action.backgroundColor = yellow.yellowCard ? .yellow : .gray
+        action.color
+        action.backgroundColor = .yellow
         return action
     }
     
-    func redAction(at indexPath: IndexPath) -> UIContextualAction {
-        let red = homeTeam[indexPath.row]
-        let action = UIContextualAction(style: .normal, title: "Red") { (action, view, completion) in
-            red.redCard = !red.redCard
+    func redCardAction(at indexPath: IndexPath) -> UIContextualAction {
+        let player = homeTeam[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: red) { (action, view, completion) in
+            player.setRed()
             completion(true)
         }
-        action.backgroundColor = red.redCard ? .red : .gray
+        action.backgroundColor = .red
         return action
     }
     
     func undoAction(at indexPath: IndexPath) -> UIContextualAction {
-        let undo = homeTeam[indexPath.row]
-        let action = UIContextualAction(style: .normal, title: "Undo") { (action, view, completion) in
-            undo.redCard = !undo.redCard
+        let player = homeTeam[indexPath.row]
+        let action = UIContextualAction(style: .normal, title: undo) { (action, view, completion) in
+            player.undo()
             completion(true)
         }
-        action.backgroundColor = undo.redCard ? .blue : .gray
+        action.backgroundColor = .blue
         return action
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeTeam.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let team = homeTeam[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: home, for: indexPath) as! PlayerCell
         cell.setHomePlayer(player: team)
         return cell
     }
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?{
         return home
     }

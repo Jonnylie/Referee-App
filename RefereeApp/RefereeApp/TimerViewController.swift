@@ -37,6 +37,8 @@ class TimerViewController: UIViewController {
     @IBAction func reset(_ sender: Any) {
         time = 0
         gameTimer.text = String(formatTime(time))
+        self.startBtnIcon.setImage(UIImage(named: playIcon), for: .normal)
+        timer.invalidate()
     }
     
     override func viewDidLoad() {

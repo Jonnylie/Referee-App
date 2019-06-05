@@ -22,7 +22,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let span:MKCoordinateSpan = MKCoordinateSpan(latitudeDelta: 0.10, longitudeDelta: 0.10)
         let region:MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
         map.setRegion(region, animated: true)
         
@@ -34,7 +34,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         {
             self.map.addAnnotation(pin)
         }
-        myPin = MapPin(title: home + "vs" + away, teamHome: getCardsOfHome(), teamAway: getCardsOfAway(), location: myLocation )
+        myPin = MapPin(title: home + " vs " + away, teamHome: getCardsOfHome(), teamAway: getCardsOfAway(), location: myLocation )
         self.map.addAnnotation(myPin!)
         self.map.delegate = self
         

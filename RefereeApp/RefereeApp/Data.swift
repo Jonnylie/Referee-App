@@ -107,23 +107,23 @@ func getNumberOfRedCards(_ team: String) -> Int
 
 func getCardsOfHome() -> String
 {
-    return "\(getNumberOfYellowCards(home)) \(yellow) \(getNumberOfRedCards(home)) \(red)"
+    return "Y:\(getNumberOfYellowCards(home)), R:\(getNumberOfRedCards(home))"
 }
 
 func getCardsOfAway() -> String
 {
-    return "\(getNumberOfYellowCards(away)) \(yellow) \(getNumberOfRedCards(away)) \(red)"
+    return "Y:\(getNumberOfYellowCards(away)), R:\(getNumberOfRedCards(away))"
 }
 
 func getPins() -> [MapPin]
 {
     var pins: [MapPin] = []
     
-    pins.append(MapPin(title: home + " vs " + away, teamHome: "5 yellow, 2 red", teamAway: "2 yellow, 1 red",  location: CLLocationCoordinate2D(latitude:-33.8886, longitude:151.1873)))
+    pins.append(MapPin(title: home + " vs " + away, teamHome: "Y:5, R:2", teamAway: "Y:2, R:1",  location: CLLocationCoordinate2D(latitude:-33.8886, longitude:151.1873)))
         
-    pins.append(MapPin(title: home + " vs " + away, teamHome: "4 yellow, 5 red", teamAway: "1 yellow, 0 red",  location: CLLocationCoordinate2D(latitude:-33.9173, longitude:151.2313)))
+    pins.append(MapPin(title: home + " vs " + away, teamHome: "Y:4, R:5", teamAway: "Y:1, R:0",  location: CLLocationCoordinate2D(latitude:-33.9173, longitude:151.2313)))
         
-    pins.append(MapPin(title: home + " vs " + away, teamHome: "3 yellow, 0 red", teamAway: "3 yellow, 5 red",  location: CLLocationCoordinate2D(latitude:-33.7738, longitude:151.1126)))
+    pins.append(MapPin(title: home + " vs " + away, teamHome: "Y:3, R:0", teamAway: "Y:3, R:5",  location: CLLocationCoordinate2D(latitude:-33.7738, longitude:151.1126)))
     
     return pins
 }

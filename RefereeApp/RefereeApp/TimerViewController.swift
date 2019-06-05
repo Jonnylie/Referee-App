@@ -54,8 +54,6 @@ class TimerViewController: UIViewController {
         let minutes: Int = (totalSeconds / 60) % 60
         return String(format: "%01d:%02d", minutes, seconds)
     }
-    
-    
 }
 
 class MyTabBarController: UITabBarController {

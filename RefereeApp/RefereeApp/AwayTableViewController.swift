@@ -85,4 +85,3 @@ class AwayTableViewController: UITableViewController {
         return away
     }
 }
-

@@ -10,7 +10,6 @@ import UIKit
 import MapKit
 import CoreLocation
 
-
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBAction func btnDone(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
@@ -76,13 +75,4 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         annotationView.canShowCallout = true
         return annotationView
     }
-    
-    
 }
-
-
-
-
-
-
-

@@ -12,7 +12,7 @@
 		8D43712C22A635550095F46A /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43712B22A635550095F46A /* Contants.swift */; };
 		8D43712E22A644B90095F46A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D43712D22A644B90095F46A /* Assets.xcassets */; };
 		8D43713022A751820095F46A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43712F22A751820095F46A /* Data.swift */; };
-		8D43713222A75BF70095F46A /* pinDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43713122A75BF70095F46A /* pinDetail.swift */; };
+		8D43713222A75BF70095F46A /* MapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43713122A75BF70095F46A /* MapPin.swift */; };
 		D8A17562229E194800E5DE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17561229E194800E5DE65 /* AppDelegate.swift */; };
 		D8A17564229E194800E5DE65 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17563229E194800E5DE65 /* TimerViewController.swift */; };
 		D8A17567229E194900E5DE65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A17565229E194900E5DE65 /* Main.storyboard */; };
@@ -30,7 +30,7 @@
 		8D43712B22A635550095F46A /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		8D43712D22A644B90095F46A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D43712F22A751820095F46A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
-		8D43713122A75BF70095F46A /* pinDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pinDetail.swift; sourceTree = "<group>"; };
+		8D43713122A75BF70095F46A /* MapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPin.swift; sourceTree = "<group>"; };
 		D8A1755E229E194800E5DE65 /* RefereeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefereeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A17561229E194800E5DE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8A17563229E194800E5DE65 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				D8A17578229E1A0800E5DE65 /* Player.swift */,
 				D8A17579229E1A0800E5DE65 /* PlayerCell.swift */,
 				D8A17576229E1A0600E5DE65 /* HomeTableViewController.swift */,
-				8D43713122A75BF70095F46A /* pinDetail.swift */,
+				8D43713122A75BF70095F46A /* MapPin.swift */,
 				D8A17577229E1A0700E5DE65 /* AwayTableViewController.swift */,
 				1787618D22A51B80007B255F /* MapViewController.swift */,
 				8D43712B22A635550095F46A /* Contants.swift */,
@@ -175,7 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8A1757B229E1A0800E5DE65 /* AwayTableViewController.swift in Sources */,
-				8D43713222A75BF70095F46A /* pinDetail.swift in Sources */,
+				8D43713222A75BF70095F46A /* MapPin.swift in Sources */,
 				D8A1756A229E194900E5DE65 /* RefereeApp.xcdatamodeld in Sources */,
 				D8A1757D229E1A0800E5DE65 /* PlayerCell.swift in Sources */,
 				D8A17564229E194800E5DE65 /* TimerViewController.swift in Sources */,

@@ -19,7 +19,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var label: UILabel!
     
     let manager = CLLocationManager()
-    var customLocation: [CLLocationCoordinate2D] = []
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[0]
@@ -28,17 +27,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let region:MKCoordinateRegion = MKCoordinateRegion(center: myLocation, span: span)
         map.setRegion(region, animated: true)
         
-        let pin0 = pinDetail(title: "Team1 vs Team2", subTitle: "Team1: 2 yellow & 1 red, Team2: 1 yellow & 1 red", location: myLocation)
-        let pin1 = pinDetail(title: "Team3 vs Team4", subTitle: "Team3: 1 yellow & 2 red, Team4: 3 yellow & 1 red",  location: customLocation[0])
-        let pin2 = pinDetail(title: "Team5 vs Team6", subTitle: "Team5: 1 yellow & 1 red, Team6: 1 yellow & 1 red",  location: customLocation[1])
-        let pin3 = pinDetail(title: "Team7 vs Team8", subTitle: "Team7: 1 yellow & 1 red, Team8: 2 yellow & 1 red",  location: customLocation[2])
+        let pins = getPins()
         
         self.map.delegate = self
         self.map.showsUserLocation = true
-        self.map.addAnnotation(pin0)
-        self.map.addAnnotation(pin1)
-        self.map.addAnnotation(pin2)
-        self.map.addAnnotation(pin3)
+        for pin in pins
+        {
+            self.map.addAnnotation(pin)
+        }
+        myPin = MapPin(title: home + "vs" + away, teamHome: getCardsOfHome(), teamAway: getCardsOfAway(), location: myLocation )
+        self.map.addAnnotation(myPin!)
         self.map.delegate = self
         
         
@@ -49,7 +47,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             else {
                 if let place = placemark?[0] {
                     if place.locality != nil {
-                        self.label.text = "\(place.locality!) \n \(place.subLocality!) \n \(place.country!)"
+                        self.label.text = "\(place.locality!), \(place.subLocality!) \n \(place.country!)"
                     }
                 }
             }
@@ -57,7 +55,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        customLocation = createLocation()
         super.viewWillAppear(animated)
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest
@@ -68,14 +65,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         manager.stopUpdatingLocation()
-    }
-    
-    func createLocation() -> [CLLocationCoordinate2D] {
-        var location: [CLLocationCoordinate2D] = []
-        location.append(CLLocationCoordinate2D(latitude:-33.8886, longitude:151.1873))
-        location.append(CLLocationCoordinate2D(latitude:-33.9173, longitude:151.2313))
-        location.append(CLLocationCoordinate2D(latitude:-33.7738, longitude:151.1126))
-        return location
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

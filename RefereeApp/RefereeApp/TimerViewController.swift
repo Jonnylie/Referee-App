@@ -41,7 +41,6 @@ class TimerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         gameTimer.text = formatTime(time)
     }
     
@@ -59,3 +58,10 @@ class TimerViewController: UIViewController {
     
 }
 
+class MyTabBarController: UITabBarController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.selectedIndex = 1
+    }
+}

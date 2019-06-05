@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import CoreLocation
+
 
 var teamHomePlayers: [Player] = []
-var teamAwayPlayers: [Player] = [];
+var teamAwayPlayers: [Player] = []
+var myPin: MapPin?
 
-func getHomeTeam() -> [Player] {
+func getHomeTeam() -> [Player]
+{
     
     teamHomePlayers.append(Player(number: 13))
     teamHomePlayers.append(Player(number: 66))
@@ -28,7 +32,8 @@ func getHomeTeam() -> [Player] {
     return teamHomePlayers
 }
 
-func getAwayTeam() -> [Player] {
+func getAwayTeam() -> [Player]
+{
     
     teamAwayPlayers.append(Player(number: 1))
     teamAwayPlayers.append(Player(number: 2))
@@ -45,5 +50,80 @@ func getAwayTeam() -> [Player] {
     return teamAwayPlayers
 }
 
+func getNumberOfYellowCards(_ team: String) -> Int
+{
+    var cards: Int = 0
+    switch team
+    {
+        case home:
+            for player in teamHomePlayers
+            {
+                if(player.getCard() == yellow)
+                {
+                    cards += 1
+                }
+            }
+        case away:
+        
+                for player in teamAwayPlayers
+                {
+                    if(player.getCard() == yellow)
+                    {
+                        cards += 1
+                    }
+                }
+        default:
+            return -1
+    }
+    return cards
+}
 
+func getNumberOfRedCards(_ team: String) -> Int
+{
+    var cards: Int = 0
+    switch team
+    {
+        case home:
+            for player in teamHomePlayers
+            {
+                if(player.getCard() == red)
+                {
+                    cards += 1
+                }
+            }
+        case away:
+            for player in teamAwayPlayers
+            {
+                if(player.getCard() == red)
+                {
+                    cards += 1
+                }
+            }
+        default:
+            return -1
+    }
+    return cards
+}
 
+func getCardsOfHome() -> String
+{
+    return "\(getNumberOfYellowCards(home)) \(yellow) \(getNumberOfRedCards(home)) \(red)"
+}
+
+func getCardsOfAway() -> String
+{
+    return "\(getNumberOfYellowCards(away)) \(yellow) \(getNumberOfRedCards(away)) \(red)"
+}
+
+func getPins() -> [MapPin]
+{
+    var pins: [MapPin] = []
+    
+    pins.append(MapPin(title: home + " vs " + away, teamHome: "5 yellow, 2 red", teamAway: "2 yellow, 1 red",  location: CLLocationCoordinate2D(latitude:-33.8886, longitude:151.1873)))
+        
+    pins.append(MapPin(title: home + " vs " + away, teamHome: "4 yellow, 5 red", teamAway: "1 yellow, 0 red",  location: CLLocationCoordinate2D(latitude:-33.9173, longitude:151.2313)))
+        
+    pins.append(MapPin(title: home + " vs " + away, teamHome: "3 yellow, 0 red", teamAway: "3 yellow, 5 red",  location: CLLocationCoordinate2D(latitude:-33.7738, longitude:151.1126)))
+    
+    return pins
+}

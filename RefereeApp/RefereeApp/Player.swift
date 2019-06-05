@@ -8,19 +8,22 @@
 
 import Foundation
 
-class Player {
+class Player // Player class
+{
     var number: Int
     var yellowCard: Bool
     var yellow2Card: Bool
     var redCard: Bool
     
-    init(number: Int) {
+    init(number: Int) //by default every player has no cards
+    {
         self.number = number
         self.yellowCard = false
         self.yellow2Card = false
         self.redCard = false
     }
-    func setYellow()
+    
+    func setYellow() //give yellow card to a player
     {
         if(!redCard)
         {
@@ -28,21 +31,23 @@ class Player {
             {
                 yellowCard = true
             }
-            else if(!yellow2Card)
+            else if(!yellow2Card)//  checks if a player got 2 yellow cards then assign a red card
             {
                 yellow2Card = true
                 setRed()
             }
         }
     }
+    
     func setRed()
     {
-        if(!redCard)
+        if(!redCard) // set red card if doesnot have one
         {
             redCard = true
         }
     }
-    func getCard() -> String
+    
+    func getCard() -> String // gets the card a player has according to its priority
     {
         if(yellowCard && !yellow2Card)
         {
@@ -57,7 +62,8 @@ class Player {
             return noCards
         }
     }
-    func undo()
+    
+    func undo() // undo the last card assigned
     {
         
         if(yellow2Card)

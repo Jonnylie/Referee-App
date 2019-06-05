@@ -12,9 +12,9 @@ class TimerViewController: UIViewController {
     
     var time: Int = 0
     var timer = Timer()
-    
     @IBOutlet weak var gameTimer: UILabel!
     @IBOutlet weak var startBtnIcon: UIButton!
+    
     @IBAction func start(_ sender: UIButton) {
         if(!timer.isValid)
         {
@@ -24,19 +24,21 @@ class TimerViewController: UIViewController {
                 selector: #selector(startTime),
                 userInfo: nil,
                 repeats: true)
-            self.startBtnIcon.setImage(UIImage(named: "pause.png"), for: .normal)
+            self.startBtnIcon.setImage(UIImage(named: pauseIcon), for: .normal)
         }
         else
         {
-            self.startBtnIcon.setImage(UIImage(named: "play.png"), for: .normal)
+            self.startBtnIcon.setImage(UIImage(named: playIcon), for: .normal)
             timer.invalidate()
         }
         
     }
+    
     @IBAction func reset(_ sender: Any) {
         time = 0
         gameTimer.text = String(formatTime(time))
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

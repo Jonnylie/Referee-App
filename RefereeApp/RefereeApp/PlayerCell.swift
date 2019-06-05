@@ -17,12 +17,14 @@ class PlayerCell: UITableViewCell {
     @IBOutlet weak var teamAwayCard: UILabel!
     
     
-    func setHomePlayer(player: Player) {
+    func setHomePlayer(player: Player) // to set the details of home team player to the table view
+    {
         teamHomeNumber.text = String(player.number)
         teamHomeCard.text = player.getCard()
     }
     
-    func setTeamTwoPlayer(player: Player) {
+    func setTeamTwoPlayer(player: Player) // to set the details of away team player to the table view
+    {
         teamAwayNumber.text = String(player.number)
         teamAwayCard.text = player.getCard()
 

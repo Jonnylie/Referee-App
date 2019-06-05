@@ -11,6 +11,7 @@
 		17C2029E22A6196800AC76A9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C2029D22A6196800AC76A9 /* CoreLocation.framework */; };
 		8D43712C22A635550095F46A /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43712B22A635550095F46A /* Contants.swift */; };
 		8D43712E22A644B90095F46A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D43712D22A644B90095F46A /* Assets.xcassets */; };
+		8D43713022A751820095F46A /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D43712F22A751820095F46A /* Data.swift */; };
 		D8A17562229E194800E5DE65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17561229E194800E5DE65 /* AppDelegate.swift */; };
 		D8A17564229E194800E5DE65 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A17563229E194800E5DE65 /* TimerViewController.swift */; };
 		D8A17567229E194900E5DE65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8A17565229E194900E5DE65 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		17C2029D22A6196800AC76A9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8D43712B22A635550095F46A /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
 		8D43712D22A644B90095F46A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D43712F22A751820095F46A /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D8A1755E229E194800E5DE65 /* RefereeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RefereeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8A17561229E194800E5DE65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8A17563229E194800E5DE65 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				1787618D22A51B80007B255F /* MapViewController.swift */,
 				8D43712B22A635550095F46A /* Contants.swift */,
 				D8A17561229E194800E5DE65 /* AppDelegate.swift */,
+				8D43712F22A751820095F46A /* Data.swift */,
 				8D43712D22A644B90095F46A /* Assets.xcassets */,
 				D8A17563229E194800E5DE65 /* TimerViewController.swift */,
 				D8A17565229E194900E5DE65 /* Main.storyboard */,
@@ -174,6 +177,7 @@
 				D8A17564229E194800E5DE65 /* TimerViewController.swift in Sources */,
 				D8A1757A229E1A0800E5DE65 /* HomeTableViewController.swift in Sources */,
 				8D43712C22A635550095F46A /* Contants.swift in Sources */,
+				8D43713022A751820095F46A /* Data.swift in Sources */,
 				D8A1757C229E1A0800E5DE65 /* Player.swift in Sources */,
 				D8A17562229E194800E5DE65 /* AppDelegate.swift in Sources */,
 				1787618E22A51B80007B255F /* MapViewController.swift in Sources */,
